@@ -1,0 +1,123 @@
+# Pet Store Schema
+schemas:
+- description: base resource definition
+  id: base
+  plural: bases
+  prefix: /v1.0
+  type: abstract
+  schema:
+    properties:
+      description:
+        description: Description
+        permission:
+        - create
+        - update
+        title: Description
+        type: string
+      id:
+        description: ID
+        permission:
+        - create
+        title: ID
+        type: string
+        view:
+        - detail
+      name:
+        description: Name
+        permission:
+        - create
+        - update
+        title: Name
+        type: string
+      tenant_id:
+        description: Tenant ID
+        permission:
+        - create
+        title: Tenant ID
+        type: string
+        view:
+        - detail
+    propertiesOrder:
+    - id
+    - name
+    - tenant_id
+    - description
+    required: []
+    type: object
+  singular: base
+  title: Base Resource
+- description: pet is pet
+  id: pet
+  plural: pets
+  extends:
+  - base
+  prefix: /v1.0/store
+  schema:
+    properties:
+      status:
+        description: Status
+        permission:
+        - create
+        - update
+        title: Status
+        type: string
+        enum:
+        - available
+        - pending
+        - sold
+    propertiesOrder:
+    - status
+    required: []
+    type: object
+  singular: pet
+  title: Pet
+- description: order is order
+  id: order
+  plural: orders
+  extends:
+  - base
+  prefix: /v1.0/store
+  schema:
+    properties:
+      pet_id:
+        description: Pet
+        permission:
+        - create
+        title: Pet
+        type: string
+        relation: pet
+        relation_property: pet
+      status:
+        description: Status
+        permission:
+        - create
+        - update
+        title: Status
+        type: string
+        enum:
+        - placed
+        - approved
+        - delivered
+      complete:
+        description: Complete
+        permission:
+        - create
+        title: Complete
+        type: boolean
+    propertiesOrder:
+    - pet_id
+    - status
+    - complete
+    required: []
+    type: object
+  singular: pet
+  title: Order
+# Policy
+policies:
+# Allow to read schema
+- action: read
+  effect: allow
+  id: policy1
+  principal: _member_
+  resource:
+    path: /gohan/v0.1/schemas*

@@ -1,0 +1,68 @@
+schemas:
+- description: Various String formats validation
+  id: format
+  plural: formats
+  extends:
+  - base
+  schema:
+    properties:
+      name:
+        description: Name of this resource
+        permission:
+        - create
+        - update
+        title: Name
+        type: string
+      cidr:
+        description: CIDR Format (e.g. 192.168.0.0/16)
+        permission:
+        - create
+        - update
+        title: CIDR
+        type: string
+        format: cidr
+      mac:
+        description: MAC Address  (e.g. 32:61:3C:4E:B6:05)
+        permission:
+        - create
+        - update
+        title: MAC Address
+        type: string
+        format: mac
+      email:
+        description: E-mail  (e.g. hayashi@ntti3.com)
+        permission:
+        - create
+        - update
+        title: E-mail
+        type: string
+        format: email
+      uuid:
+        description: UUID  (e.g. 550e8400-e29b-41d4-a716-446655440000)
+        permission:
+        - create
+        - update
+        title: UUID
+        type: string
+        format: uuid
+      ipv4:
+        description: Ipv4  (e.g. 169.254.0.0)
+        permission:
+        - create
+        - update
+        title: IPv4
+        type: string
+        format: ipv4
+    propertiesOrder:
+    - name
+    - cidr
+    - mac
+    - email
+    - uuid
+    - ipv4
+    required:
+    - name
+    type: object
+  singular: format
+  title: Various String formats
+  

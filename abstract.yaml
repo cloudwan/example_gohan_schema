@@ -1,0 +1,59 @@
+# Abstract Schema
+schemas:
+- description: base resource definition
+  id: base
+  plural: bases
+  prefix: /v1.0
+  type: abstract
+  schema:
+    properties:
+      description:
+        description: Description
+        permission:
+        - create
+        - update
+        title: Description
+        type: string
+        view:
+        - detail
+      id:
+        description: ID
+        permission:
+        - create
+        title: ID
+        type: string
+        view:
+        - detail
+      name:
+        description: Name
+        permission:
+        - create
+        - update
+        title: Name
+        type: string
+      tenant_id:
+        description: Tenant ID
+        permission:
+        - create
+        title: Tenant ID
+        type: string
+        view:
+        - detail
+    propertiesOrder:
+    - id
+    - name
+    - tenant_id
+    - description
+    required: []
+    type: object
+  singular: base
+  title: Base Resource
+# Policy
+policies:
+# Allow to read schema
+- action: read
+  effect: allow
+  id: policy1
+  principal: _member_
+  resource:
+    path: /gohan/v0.1/schemas*

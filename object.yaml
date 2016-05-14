@@ -1,0 +1,22 @@
+schemas:
+- description: Object with no properties
+  id: objecttype
+  plural: objecttypes
+  extends:
+  - base
+  schema:
+    properties:
+      parameters:
+        title: Parameters
+        type: object
+        unique: false
+        permission:
+        - create
+        description: Parameters
+    propertiesOrder:
+    - parameters
+    required:
+    - parameters
+    type: object
+  singular: objecttype
+  title: Object no properties

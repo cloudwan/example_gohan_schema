@@ -1,0 +1,55 @@
+schemas:
+- description: Array Example1
+  id: arraytype1
+  plural: arraytype1s
+  extends:
+  - base
+  schema:
+    properties:
+      name:
+        description: Name of this resource
+        permission:
+        - create
+        - update
+        title: Name
+        type: string
+      curries:
+        default: []
+        title: "Curry"
+        description: List of Curries
+        type: array
+        permission:
+        - create
+        - update
+        items:
+          type: object
+          properties:
+            name:
+              type: string
+              title: Name
+              description: Name of Curry
+            spicy:
+              type: string
+              title: Spicy Level
+              default: 1hot
+              enum:
+              - 1hot
+              - 2hot
+              - 3hot
+            vegie:
+              type: boolean
+              title: Vegie
+              default: false
+          propertiesOrder:
+          - name
+          - spicy
+          - vegie
+    propertiesOrder:
+    - name
+    - curries
+    required:
+    - name
+    - curries
+    type: object
+  singular: arraytype1
+  title: Array Example1 (1 Nest)

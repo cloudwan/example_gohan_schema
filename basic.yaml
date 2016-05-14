@@ -1,0 +1,66 @@
+schemas:
+- description: Basic String Type Examples
+  id: basictype
+  plural: basictypes
+  extends:
+  - base
+  schema:
+    properties:
+      description:
+        description: Description should be more than 10 characters
+        permission:
+        - create
+        - update
+        title: Description
+        type: string
+        minLength: 10
+      name:
+        description: Name of this resource
+        permission:
+        - create
+        - update
+        title: Name
+        type: string
+      favfood:
+        description: Set default text (Curry)
+        permission:
+        - create
+        - update
+        title: Favorite Food
+        type: string
+        default: Curry
+      color:
+        description: enum test; no defalt value
+        permission:
+        - create
+        - update
+        title: Color
+        type: string
+        enum:
+        - Red
+        - Green
+        - Blue
+      size:
+        description: enum test; with defalt value (XL)
+        permission:
+        - create
+        - update
+        title: Size
+        type: string
+        default: XL
+        enum:
+        - S
+        - M
+        - L
+        - XL
+    propertiesOrder:
+    - name
+    - favfood
+    - color
+    - size
+    required:
+    - name
+    - description
+    type: object
+  singular: basictype
+  title: Basic String Types

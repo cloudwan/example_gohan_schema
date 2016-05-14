@@ -1,0 +1,44 @@
+schemas:
+- description: Food
+  id: food
+  plural: foods
+  extends:
+  - base
+  schema:
+    properties:
+      name:
+        description: Name of Food (e.g. Curry, Sushi and etc. this is referenced by Menu. )
+        permission:
+        - create
+        - update
+        title: Name
+        type: string
+    propertiesOrder:
+    - name
+    required:
+    - name
+    type: object
+  singular: food
+  title: Food (Relation sample)
+- description: Menu
+  id: menu
+  plural: menus
+  extends:
+  - base
+  schema:
+    properties:
+      food_id:
+        description: Relation to Food
+        permission:
+        - create
+        title: Food
+        type: string
+        relation: food
+        relation_property: food
+    propertiesOrder:
+    - food_id
+    required:
+    - food_id
+    type: object
+  singular: menu
+  title: Menu (Relation sample)

@@ -1,0 +1,68 @@
+schemas:
+- description: Array Example2
+  id: arraytype2
+  plural: arraytype2s
+  extends:
+  - base
+  schema:
+    properties:
+      name:
+        description: Name of this resource
+        permission:
+        - create
+        - update
+        title: Name
+        type: string
+      curries:
+        default: []
+        title: "Curry"
+        description: List of Curries
+        type: array
+        permission:
+        - create
+        - update
+        items:
+          type: object
+          properties:
+            name:
+              type: string
+              title: Name
+              description: Name of Curry
+            spicy:
+              type: string
+              title: Spicy Level
+              default: 1hot
+              enum:
+              - 1hot
+              - 2hot
+              - 3hot
+            toppings:
+              default: []
+              type: array
+              title: Topping
+              items:
+                type: object
+                properties:
+                  ingredient:
+                    type: string
+                    title: Ingredients
+                    enum:
+                    - beef
+                    - tofu
+                    - onion
+                    - tomato
+                    - egg
+                    - becon
+          propertiesOrder:
+          - name
+          - spicy
+          - toppings
+    propertiesOrder:
+    - name
+    - curries
+    required:
+    - name
+    - curries
+    type: object
+  singular: arraytype2
+  title: Array Example2 (2 Nest)
