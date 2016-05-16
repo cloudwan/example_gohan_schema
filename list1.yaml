@@ -1,5 +1,5 @@
 schemas:
-- description: Array Example1
+- description: Array with Object type 1 Nest
   id: arraytype1
   plural: arraytype1s
   extends:
@@ -52,4 +52,4 @@ schemas:
     - curries
     type: object
   singular: arraytype1
-  title: Array Example1 (1 Nest)
+  title: Array Object 1 Nest

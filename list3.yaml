@@ -1,0 +1,62 @@
+schemas:
+- description: Array Example3
+  id: arraytype3
+  plural: arraytype3s
+  extends:
+  - base
+  schema:
+    properties:
+      name:
+        description: Name of this resource
+        permission:
+        - create
+        - update
+        title: Name
+        type: string
+      array_str1s:
+        default: []
+        title: "Array with String Type"
+        description: Normal String Type
+        type: array
+        permission:
+        - create
+        - update
+        items:
+          type: string
+          title: String Type
+      array_str2s:
+        default: []
+        title: "Array with Enum String Type"
+        description: Enum String Type
+        type: array
+        permission:
+        - create
+        - update
+        items:
+          type: string
+          title: Enum String Type
+          enum:
+          - S
+          - M
+      array_str3s:
+        default: []
+        title: "Array with Number Type"
+        description: Number Type
+        type: array
+        permission:
+        - create
+        - update
+        items:
+          type: number
+          title: Number Type
+    propertiesOrder:
+    - name
+    - array_str1s
+    - array_str2s
+    - array_str3s
+    required:
+    - name
+    - array_str1s
+    type: object
+  singular: arraytype3
+  title: Array Various Types

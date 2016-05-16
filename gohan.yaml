@@ -23,8 +23,10 @@ schemas:
     - "./format.yaml"
     - "./object.yaml"
     - "./relation.yaml"
+    - "./list3.yaml"
     - "./list1.yaml"
     - "./list2.yaml"
+
 # listen address for gohan
 # address: ":9091"
 tls:
