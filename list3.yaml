@@ -24,6 +24,7 @@ schemas:
         items:
           type: string
           title: String Type
+          default: Curry
       array_str2s:
         default: []
         title: "Array with Enum String Type"
@@ -35,9 +36,11 @@ schemas:
         items:
           type: string
           title: Enum String Type
+          default: S
           enum:
           - S
           - M
+          - L
       array_str3s:
         default: []
         title: "Array with Number Type"

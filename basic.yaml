@@ -53,11 +53,28 @@ schemas:
         - M
         - L
         - XL
+      geo:
+        description: The latitude and longitude where ESE device is located
+        permission:
+        - create
+        - update
+        title: Geo position
+        type: object
+        properties:
+          lat:
+            type: number
+            title: Latitude
+            description: Latitude
+          lon:
+            type: number
+            title: Longitude
+            description: Longitude
     propertiesOrder:
     - name
     - favfood
     - color
     - size
+    - geo
     required:
     - name
     - description

@@ -37,8 +37,7 @@ schemas:
         relation_property: food
     propertiesOrder:
     - food_id
-    required:
-    - food_id
+    required: []
     type: object
   singular: menu
   title: Menu (Relation sample)

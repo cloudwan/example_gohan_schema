@@ -1,0 +1,24 @@
+schemas:
+- description: Child A
+  id: child_a
+  parent: parent_child
+  plural: child_as
+  extends:
+  - base
+  schema:
+    properties:
+      description:
+        description: Description of Child A
+        permission:
+        - create
+        - update
+        title: Description
+        type: string
+    propertiesOrder:
+    - name
+    - description
+    required:
+    - name
+    type: object
+  singular: child_a
+  title: Child A

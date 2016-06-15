@@ -1,0 +1,24 @@
+schemas:
+- description: Parent-Child Example......
+  id: parent_child
+  plural: parent_childs
+  extends:
+  - base
+  schema:
+    properties:
+      description:
+        description: Description of parent example
+        permission:
+        - create
+        - update
+        title: Description
+        type: string
+    propertiesOrder:
+    - name
+    - description
+    required:
+    - name
+    - description
+    type: object
+  singular: parent_child
+  title: Parent-Child Example

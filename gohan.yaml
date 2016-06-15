@@ -26,6 +26,9 @@ schemas:
     - "./list3.yaml"
     - "./list1.yaml"
     - "./list2.yaml"
+    - "./parent.yaml"
+    - "./child1.yaml"
+    - "./child2.yaml"
 
 # listen address for gohan
 # address: ":9091"

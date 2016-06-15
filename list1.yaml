@@ -27,11 +27,12 @@ schemas:
             name:
               type: string
               title: Name
+              default: Masala  
               description: Name of Curry
             spicy:
               type: string
               title: Spicy Level
-              default: 1hot
+              default: 3hot
               enum:
               - 1hot
               - 2hot
@@ -39,7 +40,7 @@ schemas:
             vegie:
               type: boolean
               title: Vegie
-              default: false
+              default: true
           propertiesOrder:
           - name
           - spicy

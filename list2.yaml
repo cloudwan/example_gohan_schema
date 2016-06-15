@@ -31,7 +31,7 @@ schemas:
             spicy:
               type: string
               title: Spicy Level
-              default: 1hot
+              default: 2hot
               enum:
               - 1hot
               - 2hot
@@ -46,6 +46,7 @@ schemas:
                   ingredient:
                     type: string
                     title: Ingredients
+                    default: egg
                     enum:
                     - beef
                     - tofu
