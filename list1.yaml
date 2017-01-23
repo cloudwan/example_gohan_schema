@@ -41,8 +41,14 @@ schemas:
               type: boolean
               title: Vegie
               default: true
+            status:
+              type: string
+              title: Order status
+              view:
+              - detail
           propertiesOrder:
           - name
+          - status
           - spicy
           - vegie
     propertiesOrder:

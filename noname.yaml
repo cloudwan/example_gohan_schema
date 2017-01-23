@@ -1,0 +1,41 @@
+schemas:
+- description: No name property
+  id: noname
+  plural: nonames
+  extends:
+  - base
+  schema:
+    properties:
+      description:
+        description: Description
+        permission:
+        - create
+        - update
+        title: Description
+        type: string
+      id:
+        description: ID
+        permission:
+        - create
+        title: ID
+        type: string
+        view:
+        - list
+        - detail
+      name:
+        description: Name
+        permission:
+        - create
+        - update
+        title: Name
+        type: string
+        view:
+        - create
+        - update
+        - detail
+    propertiesOrder:
+    - name
+    - description
+    type: object
+  singular: noname
+  title: No Name Property

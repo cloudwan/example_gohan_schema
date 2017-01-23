@@ -54,6 +54,14 @@ schemas:
                     - tomato
                     - egg
                     - becon
+                  status:
+                    type: string
+                    title: Order status
+                    view:
+                    - detail
+                propertiesOrder:
+                - status
+                - ingredient
           propertiesOrder:
           - name
           - spicy

@@ -65,6 +65,8 @@ schemas:
             type: number
             title: Latitude
             description: Latitude
+            view:
+            - detail
           lon:
             type: number
             title: Longitude
