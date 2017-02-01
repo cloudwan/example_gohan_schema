@@ -29,6 +29,7 @@ schemas:
     - "./parent.yaml"
     - "./child1.yaml"
     - "./child2.yaml"
+    - "./noname.yaml"
 
 # listen address for gohan
 # address: ":9091"
