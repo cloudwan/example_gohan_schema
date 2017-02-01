@@ -52,6 +52,17 @@ schemas:
         items:
           type: number
           title: Number Type
+      array_str4s:
+        title: "Array with Relation Property"
+        description: Relation
+        type: array
+        permission:
+        - create
+        - update
+        items:
+          type: string
+          relation: food
+          relation_property: food
     propertiesOrder:
     - name
     - array_str1s
