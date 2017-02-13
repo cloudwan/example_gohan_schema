@@ -65,12 +65,19 @@ schemas:
             type: number
             title: Latitude
             description: Latitude
-            view:
-            - detail
+            permission:
+            - create
+            - update
           lon:
             type: number
             title: Longitude
             description: Longitude
+            permission:
+            - create
+            - update
+        propertiesOrder:
+        - lon
+        - lat
     propertiesOrder:
     - name
     - favfood
