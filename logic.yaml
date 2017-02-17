@@ -1,0 +1,56 @@
+schemas:
+- description: Logic Example
+  id: logic
+  plural: logics
+  extends:
+  - base
+  schema:
+    properties:
+      description:
+        description: Description of logic resource.
+        permission:
+        - create
+        - update
+        title: Description
+        type: string
+      name:
+        description: Name of this resource
+        permission:
+        - create
+        - update
+        title: Name
+        type: string
+      type:
+        description: Sample type resource
+        permission:
+        - create
+        - update
+        title: Type
+        type: string
+        default: All
+        enum:
+        - All
+        - hidePet
+      pet:
+        description: Name of pet
+        permission:
+        - create
+        - update
+        title: Pet name
+        type: string
+    propertiesOrder:
+    - name
+    - description
+    - type
+    - pet
+    propertiesLogic:
+      type:
+        hidePet:
+          hide:
+          - pet
+    required:
+    - name
+    - description
+    type: object
+  singular: logic
+  title: Logic example
