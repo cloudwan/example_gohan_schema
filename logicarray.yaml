@@ -1,0 +1,69 @@
+schemas:
+- description: Array with logic properties
+  id: logicarray
+  plural: logicarrays
+  extends:
+  - base
+  schema:
+    properties:
+      name:
+        description: Name of this resource
+        permission:
+        - create
+        - update
+        title: Name
+        type: string
+      elements:
+        default: []
+        title: "Dogs"
+        description: List of dogs
+        type: array
+        permission:
+        - create
+        - update
+        items:
+          type: object
+          properties:
+            name:
+              type: string
+              title: Name
+              default: Burek
+              description: Name of dog
+            breed:
+              type: string
+              title: Breed type
+              default: Shepherd
+              enum:
+              - Shepherd
+              - Hound
+              - Terrier
+            vaccinated:
+              type: boolean
+              title: Vaccinated
+              default: false
+            shorthaired:
+              type: boolean
+              title: Short haired
+              default: true
+          propertiesOrder:
+          - name
+          - vaccinated
+          - breed
+          - shorthaired
+          propertiesLogic:
+            breed:
+              Terrier:
+                hide:
+                - vaccinated
+              Hound:
+                hide:
+                - vaccinated
+                - shorthaired
+    propertiesOrder:
+    - name
+    - elements
+    required:
+    - name
+    type: object
+  singular: logicarray
+  title: Array with logic example
