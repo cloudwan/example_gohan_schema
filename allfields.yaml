@@ -1,0 +1,86 @@
+schemas:
+- description: Various fields
+  id: fields
+  plural: fields
+  extends:
+  - base
+  schema:
+    properties:
+      checkbox2:
+        title: Checkbox2
+        description: Checkbox2 example
+        type: boolean
+        default: true
+      input:
+        description: Input example
+        permission:
+        - create
+        - update
+        title: Input
+        type: string
+      select:
+        description: Select example
+        title: Select
+        type: string
+        default: one
+        enum:
+        - one
+        - two
+        - three
+        - four
+        - five
+        - six
+      checkbox:
+        title: Checkbox
+        description: Checkbox example
+        type: boolean
+        default: true
+      obj:
+        description: Object example
+        type: object
+        permission:
+        - create
+        - update
+        title: Object
+        properties:
+          prop1:
+            type: string
+            title: Property 1
+            description: Property 1 example
+          prop2:
+            type: string
+            title: Property 2
+            description: Property 2 example
+      number:
+        description: Number example
+        type: number
+        title: Number
+      size:
+        description: enum test; with defalt value (XL)
+        permission:
+        - create
+        - update
+        title: Size
+        type: string
+        default: XL
+        enum:
+        - S
+        - M
+        - L
+        - XL
+      number2:
+        description: Number2 example
+        type: number
+        title: Number2
+    propertiesOrder:
+    - checkbox2
+    - input
+    - select
+    - checkbox
+    - obj
+    - number
+    - size
+    - number2
+    type: object
+  singular: field
+  title: Fields example

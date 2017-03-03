@@ -32,6 +32,7 @@ schemas:
     - "./noname.yaml"
     - "./logic.yaml"
     - "./logicarray.yaml"
+    - "./allfields.yaml"
 
 # listen address for gohan
 # address: ":9091"
