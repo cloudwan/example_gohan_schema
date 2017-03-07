@@ -55,6 +55,22 @@ schemas:
         description: Number example
         type: number
         title: Number
+      obj2:
+        description: Object2 example
+        type: object
+        permission:
+        - create
+        - update
+        title: Object2
+        properties:
+          prop1:
+            type: string
+            title: Property 1
+            description: Property 1 example
+          prop2:
+            type: string
+            title: Property 2
+            description: Property 2 example
       size:
         description: enum test; with defalt value (XL)
         permission:
@@ -79,6 +95,7 @@ schemas:
     - checkbox
     - obj
     - number
+    - obj2
     - size
     - number2
     type: object
