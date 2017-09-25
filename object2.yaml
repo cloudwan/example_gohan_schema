@@ -1,0 +1,122 @@
+schemas:
+- description: Object tabs
+  id: objecttab
+  plural: objecttabs
+  extends:
+  - base
+  schema:
+    properties:
+      geo:
+        description: The latitude and longitude where ESE device is located
+        permission:
+        - create
+        - update
+        title: Geo position
+        type: object
+        properties:
+          tab1:
+            type: object
+            title: Tab 1
+            description: Tab 1 description
+            properties:
+              name:
+                description: Tab 1 string
+                title: Name
+                type: string
+          tab2:
+            type: object
+            title: Tab 2
+            description: Tab 2 description
+            properties:
+              name:
+                description: Tab 2 string
+                title: Name
+                type: string
+          tab3:
+            type: object
+            title: Tab 3
+            description: Tab 3 description
+            properties:
+              test1:
+                description: ohhh jjeee
+                permission:
+                - create
+                - update
+                title: test 1
+                type: object
+                properties:
+                  name:
+                    description: Tab 3 string
+                    title: Name
+                    type: string
+                  tab1:
+                    type: object
+                    title: Tab 1
+                    description: Tab 1 description
+                    properties:
+                      name:
+                        description: Tab 1 string
+                        title: Name
+                        type: string
+                  tab2:
+                    type: object
+                    title: Tab 2
+                    description: Tab 2 description
+                    properties:
+                      name:
+                        description: Tab 2 string
+                        title: Name
+                        type: string
+                  tab3:
+                    type: object
+                    title: Tab 3
+                    description: Tab 3 description
+                    properties:
+                      name:
+                        description: Tab 3 string
+                        title: Name
+                        type: string
+              test2:
+                description: ohhh jjeee
+                permission:
+                - create
+                - update
+                title: test 2
+                type: object
+                properties:
+                  name:
+                    description: Tab 3 string
+                    title: Name
+                    type: string
+                  tab1:
+                    type: object
+                    title: Tab 1
+                    description: Tab 1 description
+                    properties:
+                      name:
+                        description: Tab 1 string
+                        title: Name
+                        type: string
+                  tab2:
+                    type: object
+                    title: Tab 2
+                    description: Tab 2 description
+                    properties:
+                      name:
+                        description: Tab 2 string
+                        title: Name
+                        type: string
+                  tab3:
+                    type: object
+                    title: Tab 3
+                    description: Tab 3 description
+                    properties:
+                      name:
+                        description: Tab 3 string
+                        title: Name
+                        type: string
+    propertiesOrder:
+    - geo
+    type: object
+  singular: objecttab
+  title: Object tabs

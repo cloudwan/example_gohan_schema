@@ -53,6 +53,9 @@ schemas:
           - vegie
     propertiesOrder:
     - name
+    - vegie
+    - met
+    - vegie1
     - curries
     required:
     - name

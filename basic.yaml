@@ -21,6 +21,20 @@ schemas:
         - update
         title: Name
         type: string
+      vegie:
+        description: vegie of this resource
+        permission:
+        - create
+        - update
+        title: Vegie
+        type: boolean
+      vegie1:
+        description: vegie1 of this resource
+        permission:
+        - create
+        - update
+        title: Vegie1
+        type: boolean
       favfood:
         description: Set default text (Curry)
         permission:
@@ -37,6 +51,18 @@ schemas:
         title: Color
         type: string
         enum:
+        - Red
+        - Green
+        - Blue
+      colornull:
+        description: enum test; no defalt value
+        permission:
+        - create
+        - update
+        title: Color null
+        type: string
+        enum:
+        - null
         - Red
         - Green
         - Blue
@@ -77,6 +103,7 @@ schemas:
     - color
     - size
     - geo
+    - vegie
     required:
     - name
     - description

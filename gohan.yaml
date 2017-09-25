@@ -22,6 +22,7 @@ schemas:
     - "./basic.yaml"
     - "./format.yaml"
     - "./object.yaml"
+    - "./object2.yaml"
     - "./relation.yaml"
     - "./list3.yaml"
     - "./list1.yaml"
