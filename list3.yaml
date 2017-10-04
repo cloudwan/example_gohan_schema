@@ -63,11 +63,31 @@ schemas:
           type: string
           relation: food
           relation_property: food
+
+      array_str5s:
+        default: []
+        title: "Array with unique Enum String Type"
+        description: Enum String Type
+        type: array
+        permission:
+        - create
+        - update
+        uniqueItems: true
+        items:
+          type: string
+          title: Enum String Type
+          default: S
+          enum:
+          - S
+          - M
+          - L
     propertiesOrder:
     - name
     - array_str1s
     - array_str2s
     - array_str3s
+    - array_str4s
+    - array_str5s
     required:
     - name
     - array_str1s
